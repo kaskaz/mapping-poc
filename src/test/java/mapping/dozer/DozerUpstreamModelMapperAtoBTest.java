@@ -17,6 +17,9 @@ public class DozerUpstreamModelMapperAtoBTest {
         ModelMapper<StructureA, StructureB> mapper = new DozerUpstreamModelMapperAtoB();
         StructureB b = mapper.map(a);
 
+        new DozerUpstreamModelMapperAtoB()
+            .map(a);
+
         Assert.assertEquals(a.getParam1(), b.getVar1());
         Assert.assertEquals(a.getParam2(), b.getVar2());
         Assert.assertEquals(a.getParam3(), b.getVar3());
